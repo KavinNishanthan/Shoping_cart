@@ -1,4 +1,5 @@
 interface IOrderHistory {
+  orderId: String;
   items: {
     name: string;
     count: number;

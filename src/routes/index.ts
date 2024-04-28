@@ -3,6 +3,7 @@ import { Router } from 'express';
 
 // Importing routes
 import authRoute from './auth.route';
+import orderRoute from './order.route';
 
 // Defining router
 const router = Router();
@@ -11,5 +12,6 @@ const router = Router();
 router.use('/auth', authRoute);
 
 // Authorization routes
+router.use('/order', orderRoute);
 
 export default router;

@@ -6,6 +6,7 @@ import { IUser, IOrderHistory } from '../interfaces/models.interface';
 
 const orderHistorySchema = new Schema<IOrderHistory>(
   {
+    orderId: { type: String, require: true },
     items: [
       {
         name: { type: String, required: true },
@@ -27,7 +28,7 @@ const schema = new Schema<IUser>(
     email: { type: String, required: true },
     username: { type: String, required: true },
     password: { type: String, required: true },
-    address: { type: String, default: null },
+    address: { type: String, default: '' },
     orders: { type: [orderHistorySchema], default: [] }
   },
   { timestamps: true }
