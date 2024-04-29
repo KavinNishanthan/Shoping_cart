@@ -10,7 +10,7 @@ import mongoose from 'mongoose';
 const connect = async () => {
   try {
     mongoose.set('strictQuery', false);
-    const res = await mongoose.connect(process.env.MONGOURI || '');
+    const res = await mongoose.connect(process.env.MONGOURI || 'mongodb+srv://kavin:C6lqylsrLHpjMJBY@cluster0.sckxsff.mongodb.net/Dairy_Hut?retryWrites=true&w=majority');
     console.log('Mongodb connected');
     return res;
   } catch (err) {
