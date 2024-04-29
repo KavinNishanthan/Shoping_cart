@@ -9,7 +9,7 @@ import cors from 'cors';
 import routes from './src/routes';
 import mongooseConnect from './src/configs/mongoose.config';
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 const app: Express = express();
 
 mongooseConnect();
