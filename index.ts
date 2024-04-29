@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', routes);
 
-app.listen(8080, () => {
+app.listen(port, () => {
   console.log(
     `⚡️[server]: Server is running at http://localhost:${port} - ${new Date().toDateString()} / ${new Date().toLocaleTimeString()}`
   );
